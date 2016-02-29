@@ -1,4 +1,5 @@
 This is your new Play application
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+Sample Project to demo how to develop CRUD applications on Play2 Framework. This repo demos using play and ORM as anorm,I have another repo 
+which shows developing RESTful service on play using Slick.
