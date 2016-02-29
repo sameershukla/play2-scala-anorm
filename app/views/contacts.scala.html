@@ -1,0 +1,27 @@
+@(contacts: List[Contact], contact: Form[models.Contact]) @layout {
+
+<h2>New Contact</h2>
+@helper.form(action = routes.Contacts.create){
+@helper.inputText(contact("name"), '_label -> "Enter Name") @helper.inputText(contact("email"),'_label -> "Enter Email")
+
+<input type="submit" value="New Contact" />
+}
+
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Email</th>
+	</thead>
+	<tbody>
+		@contacts.map { contact =>
+		<tr>
+			<td>@contact.name</td>
+			<td>@contact.email</td>
+			<td><a href="@routes.Contacts.edit(contact.id)">Edit</a></td>
+			<td><a href="@routes.Contacts.delete(contact.id)">Delete</a></td>
+		</tr>
+		}
+	</tbody>
+</table>
+
+}

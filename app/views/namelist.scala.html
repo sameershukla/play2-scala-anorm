@@ -1,0 +1,9 @@
+@(names: List[String])
+@if(names.isEmpty){
+<h2>No Names in the List</h2>
+} else {
+<ul>
+	@names.map { name =>
+	<li>@name</li> }
+</ul>
+}
